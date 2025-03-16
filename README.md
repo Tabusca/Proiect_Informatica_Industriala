@@ -1,0 +1,1 @@
+# Proiect_Informatica_Industriala
