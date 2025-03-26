@@ -1,0 +1,19 @@
+﻿@model dynamic
+<h2>Autentificare</h2>
+<form asp-action="Login" method="post">
+    <div>
+        <label>Email</label>
+        <input type="text" name="email" required />
+    </div>
+    <div>
+        <label>Parola</label>
+        <input type="password" name="password" required />
+    </div>
+    <button type="submit">Login</button>
+</form>
+<div>
+    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+    {
+        <p style="color:red">@error.ErrorMessage</p>
+    }
+</div>
